@@ -206,7 +206,7 @@ class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     form = {}
     if self.path.find('?') > -1:
       queryStr = self.path.split('?')[1]
-      form = dict([queryParam.split('=') for queryParam in queryStr.split('&amp;')])
+      form = dict([queryParam.split('=') for queryParam in queryStr.split('&')])
 
       body = '['
 
